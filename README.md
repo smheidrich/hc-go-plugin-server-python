@@ -1,3 +1,8 @@
+# hc-go-plugin-server
+
+Python server for HashiCorp's go-plugin (RPCPlugin)
+
+DON'T use this yet if you aren't me, trust me.
 
 ## Development
 
