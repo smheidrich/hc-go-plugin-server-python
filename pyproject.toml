@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hc-go-plugin-server"
-version = "0.1.0"
+version = "0.1.1"
 description = "Server for HashiCorp's go-plugin (RPCPlugin)"
 authors = ["smheidrich <smheidrich@weltenfunktion.de>"]
 readme = "README.md"
