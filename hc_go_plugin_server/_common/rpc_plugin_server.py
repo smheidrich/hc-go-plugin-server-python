@@ -22,8 +22,7 @@ class RPCPluginServerBase:
     _controller_servicer_factory: Callable[..., Any]
     "*Must* be set by subclasses."
 
-    def __init__(self, port: str = "1234"):
-        self.port = port
+    def __init__(self, port: str = "0"):
         self.cert, self.key = generate_server_cert()
         self.cert_base64 = encode_cert_base64(self.cert)
         server = self.__class__._server_factory(
@@ -41,7 +40,7 @@ class RPCPluginServerBase:
             self.cert.public_bytes(serialization.Encoding.PEM),
         )
         creds = grpc.ssl_server_credentials([key_cert_pair_for_grpc])
-        server.add_secure_port(f"127.0.0.1:{port}", creds)
+        self.port = server.add_secure_port(f"127.0.0.1:{port}", creds)
         _configure_health_server(server)
         self.server = server
 
