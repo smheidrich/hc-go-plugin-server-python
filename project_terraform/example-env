@@ -9,13 +9,13 @@ export TF_ADDRESS="https://gitlab.com/api/v4/projects/${PROJECT_ID}/terraform/st
 # GitLab
 export TF_VAR_gitlab_token="$TF_PASSWORD"
 # GitHub
-# (nothing b/c githubtok provider does that now)
+# (nothing b/c githubfinetok provider does that now)
 # common
 export TF_VAR_project_name="hc-go-plugin-server-python"
 export TF_VAR_project_description="Python server for HashiCorp's go-plugin (RPCPlugin)"
 # PyPI (used in GitLab vars)
 export TF_VAR_pypi_token="mytoken3"
 #
-# TODO remove once githubtok provider uses keyring:
+# TODO remove once githubfinetok provider uses keyring:
 export GITHUB_USER=example
 export GITHUB_PASS=example
